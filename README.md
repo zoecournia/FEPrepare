@@ -1,6 +1,5 @@
-<p style='color:red'>
-        # FEPrepare is NOT available as a stand alone program! To use FEPrepare please use [FEPrepare](https://feprepare.vi-seem.eu/) web-server
-</p>
+# FEPrepare is NOT available as a stand alone program! To use FEPrepare please use [FEPrepare](https://feprepare.vi-seem.eu/) web-server
+
 
 # FEPrepare
 
