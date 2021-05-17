@@ -2,13 +2,15 @@
 
 FEP prepare automates the set-up procedure for performing NAMD/FEP simulations. 
 
+## It is NOT available as a stand alone program! To use FEPrepare please use [FEPrepare](https://feprepare.vi-seem.eu/) web-server
+
 ## Pre-requirements
 
 Install [VMD](https://www.ks.uiuc.edu/Development/Download/download.cgi?PackageName=VMD)
 
 Align your ligands and protein
 
-## To execute the code follow the steps described below.
+## The code used in FEPrepare is described below.
 
 a) `names3.py` ensures consistency between the atoms of the ligands and it creates the following files: newligandA.txt, newligandB.txt, newligandArtf.txt, newligandBrtf.txt, newligandAprm.txt, newligandBprm.txt, how_many.
 
