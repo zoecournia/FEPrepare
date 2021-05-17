@@ -1,0 +1,8 @@
+package require solvate  
+solvate psf-complex.psf psf-complex.pdb -t 15 -o complex_wb 
+package require autoionize
+autoionize -psf complex_wb.psf -pdb complex_wb.pdb -neutralize -o ionized
+set ubq [atomselect top all]
+measure minmax $ubq   
+measure center $ubq   
+exit

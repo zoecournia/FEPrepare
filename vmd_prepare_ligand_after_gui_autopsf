@@ -1,0 +1,8 @@
+package require solvate  
+solvate psf-solvated.psf psf-solvated.pdb -t 15 -o ligand_wb 
+package require autoionize
+autoionize -psf ligand_wb.psf -pdb ligand_wb.pdb -neutralize -o ionized
+set ubq [atomselect top all]
+measure minmax $ubq   
+measure center $ubq
+exit
