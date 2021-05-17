@@ -46,6 +46,6 @@ i) if you would you like to add 150μΜ NaCl to your system:
    
 `vmd -dispdev text -e vmd_prepare_ligand_after_gui_autopsf > vmd_log.txt`
 
-j) `fep.py` generated the necessary ionized_fep files for the simulation.
+j) `fep.py` generates the necessary ionized_fep files for the simulation.
 
 k) `min-max.py` returns the coordinates of the center of the box.
