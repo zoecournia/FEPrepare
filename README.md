@@ -1,8 +1,10 @@
+<p style='color:red'>
+        # FEPrepare is NOT available as a stand alone program! To use FEPrepare please use [FEPrepare](https://feprepare.vi-seem.eu/) web-server
+</p>
+
 # FEPrepare
 
 FEP prepare automates the set-up procedure for performing NAMD/FEP simulations. 
-
-## It is NOT available as a stand alone program! To use FEPrepare please use [FEPrepare](https://feprepare.vi-seem.eu/) web-server
 
 ## Pre-requirements
 
