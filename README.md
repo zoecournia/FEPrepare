@@ -12,46 +12,46 @@ Align your ligands and protein
 
 a) This script ensures consistency between the atoms of the ligands and it creates the following files: newligandA.txt, newligandB.txt, newligandArtf.txt, newligandBrtf.txt, newligandAprm.txt, newligandBprm.txt, how_many.
 
-`python names3.py /path/to/reference.pdb /path/to/mutant.pdb /path/to/reference.rtf /path/to/mutant.rtf /path/to/reference.prm /path/to/mutant.prm` 
+`python2 names3.py /path/to/reference.pdb /path/to/mutant.pdb /path/to/reference.rtf /path/to/mutant.rtf /path/to/reference.prm /path/to/mutant.prm` 
 
 b) This script identifies the common atoms between reference and mutant ligands. It returns sortedB, which is the .rtf file of the mutant ligand sorted          according to the reference ligand.
 
-`python merge2.py newligandArtf.txt newligandBrtf.txt > sortedB`
+`python2 merge2.py newligandArtf.txt newligandBrtf.txt > sortedB`
 
 c) This script implements the dual topology methodology. It generates files where both ligands coexist (pdb: hybridpdb.txt, rtf: final.txt, prm: updated.prm)
 
-`python dual2.py`
+`python2 dual2.py`
 
 d) This script generates a complex file where the hybrid ligand generated above and the protein coexist.
 
-`python complex.py /path/to/protein.pdb`
+`python2 complex.py /path/to/protein.pdb`
 
 e) This script generates the psfgen file needed from VMD.
 
-`python split_chains.py complex newligandA.txt`
+`python2 split_chains.py complex newligandA.txt`
 
 ### VMD commands:
 
-f) `run_vmd_tmp -dispdev text -e psfgen`
+f) `vmd -dispdev text -e psfgen`
 
 
 g) if you would you like to add 150μΜ NaCl to your system:
 
-`run_vmd_tmp -dispdev text -e vmd_prepare_complex_after_gui_autopsf_ionize > vmd_log.txt`
+`vmd -dispdev text -e vmd_prepare_complex_after_gui_autopsf_ionize > vmd_log.txt`
         
    otherwise:
    
-`run_vmd_tmp -dispdev text -e vmd_prepare_complex_after_gui_autopsf > vmd_log.txt`
+`vmd -dispdev text -e vmd_prepare_complex_after_gui_autopsf > vmd_log.txt`
 
-h) `run_vmd_tmp -dispdev text -e psfgen_solv`
+h) `vmd -dispdev text -e psfgen_solv`
 
 i) if you would you like to add 150μΜ NaCl to your system:
 
-`run_vmd_tmp -dispdev text -e vmd_prepare_ligand_after_gui_autopsf_ionize > vmd_log.txt`
+`vmd -dispdev text -e vmd_prepare_ligand_after_gui_autopsf_ionize > vmd_log.txt`
    
    otherwise:
    
-`run_vmd_tmp -dispdev text -e vmd_prepare_ligand_after_gui_autopsf > vmd_log.txt`
+`vmd -dispdev text -e vmd_prepare_ligand_after_gui_autopsf > vmd_log.txt`
 
 j) This script generated the necessary ionized_fep files for the simulation.
 
